@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -30,15 +29,12 @@ class WeatherPage extends StatelessWidget {
         backgroundColor: Colors.red,
         elevation: 0,
       ),
-
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(16),
             child: Column(
               children: [
-
-                // Search city
                 TextField(
                   style: const TextStyle(color: Colors.white),
                   decoration: const InputDecoration(
@@ -54,7 +50,6 @@ class WeatherPage extends StatelessWidget {
 
                 const SizedBox(height: 20),
 
-                // City name
                 const Text(
                   'Murmansk Oblast, RU',
                   textAlign: TextAlign.center,
@@ -66,7 +61,6 @@ class WeatherPage extends StatelessWidget {
 
                 const SizedBox(height: 8),
 
-                // Date
                 const Text(
                   'Friday, Mar 20, 2020',
                   style: TextStyle(
@@ -77,7 +71,6 @@ class WeatherPage extends StatelessWidget {
 
                 const SizedBox(height: 35),
 
-                // Temperature and weather
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -86,9 +79,7 @@ class WeatherPage extends StatelessWidget {
                       color: Colors.white,
                       size: 75,
                     ),
-
                     const SizedBox(width: 20),
-
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
@@ -113,7 +104,6 @@ class WeatherPage extends StatelessWidget {
 
                 const SizedBox(height: 45),
 
-                // Weather details
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: const [
@@ -137,7 +127,6 @@ class WeatherPage extends StatelessWidget {
 
                 const SizedBox(height: 45),
 
-                // Forecast title
                 const Text(
                   '7-DAY WEATHER FORECAST',
                   style: TextStyle(
@@ -148,7 +137,6 @@ class WeatherPage extends StatelessWidget {
 
                 const SizedBox(height: 15),
 
-                // Forecast cards
                 SizedBox(
                   height: 105,
                   child: ListView(
@@ -182,7 +170,6 @@ class WeatherPage extends StatelessWidget {
   }
 }
 
-// Weather information widget
 class WeatherInfo extends StatelessWidget {
   final IconData icon;
   final String value;
@@ -224,7 +211,6 @@ class WeatherInfo extends StatelessWidget {
   }
 }
 
-// Daily forecast card
 class ForecastCard extends StatelessWidget {
   final String day;
   final String temperature;
@@ -255,7 +241,6 @@ class ForecastCard extends StatelessWidget {
               fontSize: 17,
             ),
           ),
-
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

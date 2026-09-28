@@ -68,7 +68,7 @@ Widget _myListView(BuildContext context) {
     itemBuilder: (context, index) {
       final item = items[index];
 
-      // Heading
+      
       if (item is HeadingItem) {
         return Card(
           color: Colors.blue.shade50,
@@ -99,9 +99,9 @@ Widget _myListView(BuildContext context) {
             ),
           ),
         );
-      }
+      } 
 
-      // Message
+      
       else if (item is MessageItem) {
         return Card(
           color: Colors.blue.shade50,
