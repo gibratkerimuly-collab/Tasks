@@ -12,11 +12,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Simple Routing'),
+          title: const Text('Named Routing'),
           centerTitle: true,
         ),
         body: const HomePage(),
       ),
+      initialRoute: '/',
+      routes: {
+        '/page2': (context) => const Page2(),
+      },
     );
   }
 }
@@ -29,8 +33,7 @@ class HomePage extends StatelessWidget {
     return Center(
       child: ElevatedButton(
         onPressed: () {
-          Route route = MaterialPageRoute(builder: (context) => const Page2());
-          Navigator.push(context, route);
+          Navigator.pushNamed(context, '/page2');
         },
         child: const Text('Move to Page 2'),
       ),
@@ -45,7 +48,7 @@ class Page2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Page 2'),       
+        title: const Text('Page 2'),
         centerTitle: true,
       ),
       body: Center(
